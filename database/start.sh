@@ -7,7 +7,7 @@ docker run \
     --name db \
     -e POSTGRES_PASSWORD=greenlight \
     -e PGDATA=/var/lib/postgresql/data/pgdata \
-	-v $DIR/pgdata:/var/lib/postgresql/data \
-    -p 5432:5432 \
+    -v $DIR/pgdata:/var/lib/postgresql/data \
+    -p 5433:5432 \
     --rm \
     postgres
