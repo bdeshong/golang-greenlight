@@ -44,3 +44,13 @@ func Unique[T comparable](values []T) bool {
 
 	return len(values) == len(uniqueValues)
 }
+
+// Generic function which returns true if a specific value is in a list.
+func PermittedValue[T comparable](value T, permittedValues ...T) bool {
+	for i := range permittedValues {
+		if value == permittedValues[i] {
+			return true
+		}
+	}
+	return false
+}
