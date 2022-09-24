@@ -2,3 +2,4 @@
 database/pgdata/
 .envrc
 vendor/
+bin/
