@@ -16,9 +16,8 @@ import (
 	"greenlight.deshong.net/internal/data"
 	"greenlight.deshong.net/internal/jsonlog"
 	"greenlight.deshong.net/internal/mailer"
+	"greenlight.deshong.net/internal/vcs"
 )
-
-const version = "1.0.0"
 
 type config struct {
 	port int
@@ -53,6 +52,10 @@ type application struct {
 	mailer mailer.Mailer
 	wg     sync.WaitGroup
 }
+
+var (
+	version = vcs.Version()
+)
 
 func main() {
 	var cfg config
